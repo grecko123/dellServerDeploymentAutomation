@@ -100,6 +100,11 @@ def main(args, logger_obj=print):
     parser.add_argument('ip', help='iDRAC management IP address')
     parser.add_argument('-u', help='IDRAC Console Username', required=True)
     parser.add_argument('-p', help='IDRAC Console Password', required=True)
+    args = vars(parser.parse_args())
+    idrac_ip = args[0]
+    idrac_user = args['u']
+    idrac_password = args['p']
+
 
     logger_obj('Installer Begin . . .')
 
